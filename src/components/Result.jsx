@@ -22,9 +22,10 @@ const result = ()=>{
         'calculusAlreadyDone': 
             previousValueContainer.textContent.split(' ').length === 3 &&
             previousValueContainer.textContent.split(' ')[2] !== '' &&
-            currentValueContainer.textContent !== ''
+            currentValueContainer.textContent !== '',
+        'secondValueResultDot': currentValueContainer.textContent === '0.'
     }
-    if (context.oneValueResultBug || context.calculusAlreadyDone) return null
+    if (context.oneValueResultBug || context.calculusAlreadyDone || context.secondValueResultDot) return null
     else {
         previousValueContainer.textContent += currentValueContainer.textContent
         currentValueContainer.textContent = ''
